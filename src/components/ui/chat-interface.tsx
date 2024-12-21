@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Bot, Send, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
@@ -88,10 +88,14 @@ export function ChatInterface() {
     }
   }, [messages]);
 
-  const formattedMessages: Message[] = messages.map((msg) => ({
-    ...msg,
-    timestamp: new Date(),
-  }));
+  const formattedMessages: Message[] = messages
+    .filter(
+      (msg): msg is Message => msg.role === "user" || msg.role === "assistant"
+    )
+    .map((msg) => ({
+      ...msg,
+      timestamp: new Date(),
+    }));
 
   return (
     <div className="flex h-full flex-col bg-white dark:bg-zinc-950">
