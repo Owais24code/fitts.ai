@@ -28,11 +28,11 @@ function MessageBubble({ message }: { message: Message }) {
       )}
     >
       <Avatar className={cn("h-8 w-8", isUser ? "ml-2" : "mr-2")}>
-        <AvatarFallback className={isUser ? "bg-blue-500" : "bg-zinc-800"}>
+        <AvatarFallback className={isUser ? "bg-purple-500" : "bg-zinc-800"}>
           {isUser ? (
-            <User className="h-4 w-4 text-white" />
+            <User className="h-4 w-4 text-black" />
           ) : (
-            <Bot className="h-4 w-4 text-white" />
+            <Bot className="h-4 w-4 text-black" />
           )}
         </AvatarFallback>
       </Avatar>
@@ -45,12 +45,12 @@ function MessageBubble({ message }: { message: Message }) {
         <div
           className={cn(
             "rounded-2xl px-4 py-2",
-            isUser ? "bg-blue-500 text-white" : "bg-zinc-100 dark:bg-zinc-800"
+            isUser ? "bg-purple-500 text-black" : "bg-zinc-100 dark:bg-zinc-800"
           )}
         >
           {message.content}
         </div>
-        <span className="px-2 text-xs text-zinc-500">
+        <span className="px-2 text-xs text-zinc-700">
           {format(message.timestamp, "HH:mm")}
         </span>
       </div>

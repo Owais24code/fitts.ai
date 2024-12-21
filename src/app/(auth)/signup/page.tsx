@@ -5,11 +5,11 @@ export default function SignUpPage() {
   return (
     <div className="flex min-h-screen">
       {/* Left Section */}
-      <div className="hidden w-1/2 bg-[#B4ECE3] lg:flex items-center justify-center p-8 relative">
+      <div className="hidden w-1/2 bg-[#5b187f] lg:flex items-center justify-center p-8 relative">
         <div className="relative w-full max-w-md aspect-square">
           <Image
-            src="/placeholder.svg?height=400&width=400"
-            alt="3D Objects Illustration"
+            src="/"
+            alt="image"
             width={400}
             height={400}
             className="object-contain"

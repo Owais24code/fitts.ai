@@ -6,9 +6,16 @@ import { Label } from "@/components/ui/label";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function SignUpForm() {
   const [showPassword, setShowPassword] = useState(false);
+
+  const router = useRouter();
+
+  const handleCreateAccount = () => {
+    router.push("/signin");
+  };
 
   return (
     <div className="space-y-6">
@@ -85,7 +92,10 @@ export function SignUpForm() {
         </div>
       </div>
 
-      <Button className="w-full bg-[#40BFB2] hover:bg-[#35A198]">
+      <Button
+        className="w-full bg-[#40BFB2] hover:bg-[#35A198]"
+        onClick={handleCreateAccount}
+      >
         Create Account
       </Button>
 
