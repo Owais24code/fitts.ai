@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 export function Sidebar() {
-  const [chatHistory, setChatHistory] = useState([
+  const [chatHistory] = useState([
     { id: 1, title: "Summer outfit ideas" },
     { id: 2, title: "Formal wear for wedding" },
     { id: 3, title: "Casual Friday looks" },
