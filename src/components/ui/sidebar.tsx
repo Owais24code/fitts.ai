@@ -10,7 +10,7 @@ export function Sidebar() {
   ]);
 
   return (
-    <div className="w-64 bg-gradient-to-bl from-purple-200 to-slate-700 p-4 shadow-md">
+    <div className="w-64 bg-gradient-to-bl from-blue-700 to-gray-600 p-4 shadow">
       <div className="p-4">
         <h2 className="text-lg font-semibold mb-4">Chat History</h2>
         <ul className="space-y-2">
